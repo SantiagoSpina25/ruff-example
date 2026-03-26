@@ -38,4 +38,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/SantiagoSpina25/ruff-example:latest
+          tags: ghcr.io/santiagospina25/ruff-example:latest
