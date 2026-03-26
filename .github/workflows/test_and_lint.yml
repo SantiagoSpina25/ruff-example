@@ -1,0 +1,24 @@
+name: Test and lint
+on: 
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  test_and_lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.14.2
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.14.2"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Test with pytest
+        run: pytest test_main.py
