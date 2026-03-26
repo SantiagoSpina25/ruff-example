@@ -5,6 +5,7 @@ on:
 
 permissions:
   contents: read
+  packages: write
 
 jobs:
   test_and_lint:
